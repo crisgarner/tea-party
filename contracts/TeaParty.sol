@@ -14,7 +14,7 @@ contract TeaParty {
 
   chai public CHAI;
   IERC20 public DAI;
-  mapping (address => uint) userToStake;
+  mapping (address => uint) public userToStake;
   address public owner;
   address public beneficiary;
 

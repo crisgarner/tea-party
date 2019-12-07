@@ -8,7 +8,7 @@ const mnemonic = process.env.MNENOMIC;
 
 const config: BuidlerConfig = {
   solc: {
-    version: "0.5.12"
+    version: "0.5.11"
   },
   //@ts-ignore
   networks: {
