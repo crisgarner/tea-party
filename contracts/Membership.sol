@@ -3,7 +3,7 @@ pragma solidity 0.5.11;
 import "@openzeppelin/contracts/access/Roles.sol";
 import "./TeaParty.sol";
 
-contract MembershipFactory {
+contract Membership{
   /** @notice Defines the roles of the actors. */
   using Roles for Roles.Role;
 
