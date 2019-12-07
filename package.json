@@ -1,0 +1,19 @@
+{
+  "name": "community-funds",
+  "version": "1.0.0",
+  "description": "Gitcoin Communities Hack",
+  "main": "index.js",
+  "author": "@crisgarner",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@nomiclabs/buidler": "^1.0.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.14",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
