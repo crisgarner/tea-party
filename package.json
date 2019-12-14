@@ -14,8 +14,8 @@
     "rinkeby": "npx buidler run --network rinkeby scripts/deploy.ts",
     "kovan": "npx buidler run --network kovan scripts/deploy.ts",
     "membership": "npx buidler run --network kovan scripts/deployMembership.ts",
-    "verify1": "npx buidler verify-contract --contract-name TeaParty --address 0x565fB618Fd7DF589fbaD78cE784c67bFc7851F42",
-    "verify2": "npx buidler verify-contract --contract-name Membership --address 0xa244c40751d09574740f6be64B13b11e2064Fe56"
+    "verify1": "npx buidler verify-contract --contract-name TeaParty --address 0x565fB618Fd7DF589fbaD78cE784c67bFc7851F42 '0xb641957b6c29310926110848db2d464c8c3c3f38' '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa' '0xfF9Fe9664e7e0A289A3c64c9e057bCa27Be6685A'",
+    "verify2": "npx buidler verify-contract --contract-name Membership --address 0xa244c40751d09574740f6be64B13b11e2064Fe56 '0x565fB618Fd7DF589fbaD78cE784c67bFc7851F42'"
   },
   "dependencies": {},
   "devDependencies": {

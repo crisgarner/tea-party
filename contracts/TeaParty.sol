@@ -47,10 +47,11 @@ contract TeaParty {
     * update balance
     * give back dai
     */
-  function retrieveStake(uint _amount) public {
-    userToStake[msg.sender] = userToStake[msg.sender].sub(_amount);
-    CHAI.exit(address(this), _amount);
-    DAI.transfer(msg.sender, _amount);
+  function retrieveStake() public {
+    uint amount = userToStake[msg.sender];
+    userToStake[msg.sender] = userToStake[msg.sender].sub(amount);
+    CHAI.exit(address(this), amount);
+    DAI.transfer(msg.sender, amount);
   }
 
   /** @notice returns money to the beneficiary of contract */
@@ -59,3 +60,4 @@ contract TeaParty {
     DAI.transfer(beneficiary, balance);
   }
 }
+

@@ -26,7 +26,6 @@ contract Membership{
   }
 
   function addToRole(address _user) public onlyOwner {
-    cleanRole(_user);
     uint amount = teaParty.userToStake(_user);
     if(amount > 1000 ether){
       _yolo.add(_user);
