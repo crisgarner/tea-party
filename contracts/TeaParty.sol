@@ -54,7 +54,7 @@ contract TeaParty {
     DAI.transfer(msg.sender, amount);
   }
 
-  /** @notice returns money to the beneficiary of contract */
+  /** @notice returns money to the beneficiary of contract, requires staker to retrieve stake */
   function retrieveFunds() public {
     uint balance = DAI.balanceOf(address(this));
     DAI.transfer(beneficiary, balance);
