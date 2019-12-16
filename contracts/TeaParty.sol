@@ -48,9 +48,10 @@ contract TeaParty {
     * give back dai
     */
   function retrieveStake() public {
+    uint chaiBalance = CHAI.balanceOf(address(this));
     uint amount = userToStake[msg.sender];
     userToStake[msg.sender] = userToStake[msg.sender].sub(amount);
-    CHAI.exit(address(this), amount);
+    CHAI.exit(address(this), chaiBalance);
     DAI.transfer(msg.sender, amount);
   }
 

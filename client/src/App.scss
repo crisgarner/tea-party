@@ -1,3 +1,7 @@
+$primary: #dd3745;
+$secondary: #a52639;
+$other: #431d66;
+
 .App {
   text-align: center;
 }
@@ -23,5 +27,69 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.container.initial {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+
+  button {
+    width: 200px;
+    border-radius: 0.25rem;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+.main {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.membership {
+  display: grid;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+
+  h3,
+  p {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  .btn {
+    width: 200px;
+  }
+}
+
+.tea-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    width: 200px;
+  }
+}
+
+.btn.primary {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $secondary;
+    border-color: $secondary;
   }
 }
