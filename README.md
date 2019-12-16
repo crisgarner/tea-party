@@ -1,4 +1,5 @@
-# tea-party
+# Tea Party
+## Gitcoin Global Communities Hack
 Project to make communities sustainable with a no loss membership
 
 # Demo
