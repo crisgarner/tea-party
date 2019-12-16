@@ -4,6 +4,8 @@ Project to make communities sustainable with a no loss membership
 
 # Demo
 
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/_YaRDvBi_to/0.jpg)](http://www.youtube.com/watch?v=_YaRDvBi_to)
+
 url: https://www.youtube.com/watch?v=_YaRDvBi_to&feature=youtu.be
 
 # Description
