@@ -15,7 +15,7 @@
     "kovan": "npx buidler run --network kovan scripts/deploy.ts",
     "membership": "npx buidler run --network kovan scripts/deployMembership.ts",
     "verify1": "npx buidler verify-contract --contract-name TeaParty --address 0x7331F549a075175D71d7870F1cDF75bD4B4DAB1C '0xb641957b6c29310926110848db2d464c8c3c3f38' '0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa' '0xfF9Fe9664e7e0A289A3c64c9e057bCa27Be6685A'",
-    "verify2": "npx buidler verify-contract --contract-name Membership --address 0x86AE3EC5f4044538577Bb211F1e7F11721ce6080 '0x7331F549a075175D71d7870F1cDF75bD4B4DAB1C'"
+    "verify2": "npx buidler verify-contract --contract-name Membership --address 0xa4C2A6fFA60fbE8e6Cc5842814617A0cDe39bF01 '0x7331F549a075175D71d7870F1cDF75bD4B4DAB1C'"
   },
   "dependencies": {},
   "devDependencies": {

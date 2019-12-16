@@ -16,6 +16,7 @@ type props = {
 export const Main = ({ teaParty, membership, web3Provider, account, dai, chai }: props) => {
   const shortAddress = addressShortener(account);
   const [amount, setAmount] = useState("");
+  const [roleAddress, setRoleAddress] = useState("");
   const [address, setAddress] = useState(shortAddress);
   const [owner, setOwner] = useState("");
   const [daiBalance, setDaiBalance] = useState("0");
@@ -25,8 +26,22 @@ export const Main = ({ teaParty, membership, web3Provider, account, dai, chai }:
   const [tchaiBalance, setTChaiBalance] = useState("0");
 
   const getRole = async () => {
-    const role = await membership.getRole(account);
+    const role = await membership.getRole(roleAddress);
     alert(role);
+  };
+
+  const addRole = async () => {
+    const receipt = await membership.addToRole(roleAddress);
+    if (receipt) {
+      alert("success, refresh page after confirmation");
+    }
+  };
+
+  const updateRole = async () => {
+    const receipt = await membership.updateRole(roleAddress);
+    if (receipt) {
+      alert("success, refresh page after confirmation");
+    }
   };
 
   const approveAmount = async () => {
@@ -132,11 +147,36 @@ export const Main = ({ teaParty, membership, web3Provider, account, dai, chai }:
       <div className="membership mt-4">
         <h3>Memberships</h3>
         <p>{process.env.REACT_APP_MEMBERSHIP_ADDRESS}</p>
-        <Button className="primary" onClick={getRole}>
-          Get Role
-        </Button>
-        <Button className="primary">Add Role</Button>
-        <Button className="primary">Update Role</Button>
+        <FormGroup>
+          <Label for="roleAddress">Role Address</Label>
+          <Input
+            type="text"
+            name="roleAddress"
+            id="roleAddress"
+            value={roleAddress}
+            placeholder="Role Address"
+            onChange={e => {
+              setRoleAddress(e.target.value);
+            }}
+          />
+        </FormGroup>
+        <div className="tea-buttons">
+          <Button className="primary" onClick={getRole}>
+            Get Role
+          </Button>
+          {account === owner ? (
+            <>
+              <Button className="primary" onClick={addRole}>
+                Add Role
+              </Button>
+              <Button className="primary" onClick={updateRole}>
+                Update Role
+              </Button>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
       <div className="tea-party mt-4">
         <h3>Tea Party</h3>

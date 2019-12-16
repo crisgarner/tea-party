@@ -50,10 +50,15 @@ contract Membership{
   }
 
   function cleanRole(address _user) public onlyOwner{
-    _yolo.remove(_user);
-    _pro.remove(_user);
-    _medium.remove(_user);
-    _starter.remove(_user);
+    if(_yolo.has(_user)){
+      _yolo.remove(_user);
+    }else if(_pro.has(_user)){
+      _pro.remove(_user);
+    }else if(_medium.has(_user)){
+      _medium.remove(_user);
+    }else if(_starter.has(_user)){
+      _starter.remove(_user);
+    }
   }
 
   function getRole(address _user) public view returns (string memory) {
